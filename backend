@@ -2,6 +2,8 @@ import os, sqlite3, csv, random
 
 db_name = "memberData.db"
 
+#initializes members database, if file already exists does nothing, this way I don't have to write separate files
+
 def init():
 
     if (not os.path.exists(db_name)):
@@ -17,6 +19,8 @@ def init():
 
         conn.commit()
 
+#outputs all the members' info
+
 def check():
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
@@ -25,8 +29,8 @@ def check():
     for r in res:
         print r
 
+#adds a member, takes username and password for parameters
 def addMember(u, p):
-
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
     i = iterate()
@@ -35,6 +39,7 @@ def addMember(u, p):
     c.execute(q)
     conn.commit()
     
+#generates a random number for member id    
 def iterate():
     q = """select id from members;"""
     num = random.randint(100,999)
@@ -43,8 +48,8 @@ def iterate():
             iterate()
     return num    
 
+#checks username and corresponding password, returns a boolean
 def checkpassword(uname, passwd):
-
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
 #    q = """ select pwd from members where user = "%s" """ 
