@@ -1,55 +1,65 @@
-import os, sqlite3, csv
+import os, sqlite3, csv, random 
 
-def go():
+db_name = "memberData.db"
 
-    if (not os.path.exists("blogData.db")):
+def init():
 
-        conn = sqlite3.connect("blogData.db")
+    if (not os.path.exists(db_name)):
+
+        conn = sqlite3.connect(db_name)
         c = conn.cursor()
 
-        q = "create table members (user text, pwd text, id integer)"
+        q = """create table members (user text, pwd text, id integer);"""
         c.execute(q)
 
-        q = "insert into members (user, pwd, id) values ('Theo', 'TheO', 2)"
+        q = """insert into members values ("Theo", "TheO", 200);"""
         c.execute(q)
 
         conn.commit()
 
-def temp():
-    conn = sqlite3.connect("blogData.db")
+def check():
+    conn = sqlite3.connect(db_name)
     c = conn.cursor()
-
-    q="""                                                                       
-SELECT * FROM members                                                           
-"""
-
-    result = c.execute(q);
-    for r in result:
+    x = """SELECT * FROM members"""
+    res = c.execute(x)
+    for r in res:
         print r
-        print r[0]
-        
-def addMember(u, p, i):
+
+def addMember(u, p):
 
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
-    q = """insert into members values ("%s","%s",%i)"""
+    i = iterate()
+    q = """insert into members values ("%s","%s",%i);"""
     q = q%(u,p,i)
-    print q
-
     c.execute(q)
+    conn.commit()
+    
+def iterate():
+    q = """select id from members;"""
+    num = random.randint(100,999)
+    for a in q:
+        if num == a:
+            iterate()
+    return num    
 
 def checkpassword(uname, passwd):
 
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
-    q = """ select pwd from members where user = """ + uname
+#    q = """ select pwd from members where user = "%s" """ 
+#    q = q%(uname)
+
+    q = "select * from members;"
+
     for line in c.execute(q):
-        if line == passwd:
-            return true
-        else:
-            return false
+        print line
 
-#go()                                                                                                
-#temp()    
+    return "false"
+#        if line == passwd:
+#            return true
+#        else:
+#            return false
 
+#check()
 
