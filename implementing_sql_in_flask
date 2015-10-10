@@ -1,0 +1,27 @@
+from flask import Flask, render_template, request
+import data
+
+app = Flask(__name__)
+
+@app.route("/")
+def homepage():
+    return "HI"
+
+@app.route("/temp")
+def go():
+    data.temp()
+    return "TEMP"
+
+@app.route("/add")
+def add():
+    data.addMember("Sarah", "Perry")
+    return "YAY"
+
+@app.route("/check")
+def check():
+    return data.checkpassword('Sarah', 'Perry')
+
+if __name__ == "__main__":
+
+    app.debug = True
+    app.run()
