@@ -1,0 +1,479 @@
+Last login: Thu Oct  8 15:42:35 on ttys001
+Macintosh:~ chloekaubisch$ import SQLite
+-bash: import: command not found
+Macintosh:~ chloekaubisch$ python
+Python 2.7.6 (v2.7.6:3a1db0d2747e, Nov 10 2013, 00:42:54) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import SQLite
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named SQLite
+>>> import sqlite3
+>>> 
+KeyboardInterrupt
+>>> cxc^X^C
+exot
+exot
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.py", line 15, in decode
+    def decode(input, errors='strict'):
+KeyboardInterrupt
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> quit
+Use quit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+Macintosh:~ chloekaubisch$ cd Softdev
+Macintosh:Softdev chloekaubisch$ ls
+HW1
+Macintosh:Softdev chloekaubisch$ mkdir Proj1
+Macintosh:Softdev chloekaubisch$ cd Proj1
+Macintosh:Proj1 chloekaubisch$ emacs data.py -n2
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 7, in <module>
+    if (not os.path.exists (db_name)):
+NameError: name 'os' is not defined
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ python data.py
+does not exist
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+exists
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 12, in <module>
+    conn.execute("insert into data (user, pwd, id) values ('Joe' , 'Perry' , 01)")
+sqlite3.OperationalError: no such table: data
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 8, in <module>
+    conn.execute("create table data (user text, pwd text, id real)")
+sqlite3.OperationalError: table data already exists
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+<sqlite3.Cursor object at 0x10048ddc0>
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+
+[1]+  Stopped                 emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 24, in <module>
+    go()    
+  File "data.py", line 10, in go
+    c.execute(q)
+sqlite3.OperationalError: table members already exists
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 27, in <module>
+    go()    
+  File "data.py", line 12, in go
+    c.execute(q)
+sqlite3.OperationalError: table members already exists
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 28, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    rd = csv.DictReader(open("blogData.csv"))
+NameError: global name 'csv' is not defined
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 28, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    rd = DictReader(open("blogData.csv"))
+NameError: global name 'DictReader' is not defined
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 1, in <module>
+    import os, sqlite3, DictReader
+ImportError: No module named DictReader
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 27, in <module>
+    ex()
+  File "data.py", line 23, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 27, in <module>
+    ex()
+  File "data.py", line 23, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 27, in <module>
+    ex()
+  File "data.py", line 21, in ex
+    rd = csv.DictReader(open("blogData.csv"))
+NameError: global name 'csv' is not defined
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 27, in <module>
+    ex()
+  File "data.py", line 23, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    go()    
+  File "data.py", line 15, in go
+    c.execute(q)
+sqlite3.OperationalError: no such table: members
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 25, in <module>
+    go()    
+  File "data.py", line 16, in go
+    conn.commit()
+UnboundLocalError: local variable 'conn' referenced before assignment
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 23, in ex
+    print BASE%line
+KeyError: 'user'
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Name : {' 2': ' 3', ' "pass"': ' "frank"', 'kevin': 'joe'}
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 26, in <module>
+    ex()
+  File "data.py", line 23, in ex
+    print BASE%line
+TypeError: not enough arguments for format string
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Name : {' 2': ' 3', ' "pass"': ' "frank"', 'kevin': 'joe'}
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Name : {' 2': ' 3', ' "pass"': ' "frank"', 'kevin': 'joe'}
+Traceback (most recent call last):
+  File "data.py", line 42, in <module>
+    temp()
+  File "data.py", line 35, in temp
+    result = c.execute(q);
+sqlite3.DatabaseError: file is encrypted or is not a database
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 41, in <module>
+    ex()
+  File "data.py", line 22, in ex
+    for line in rd:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 103, in next
+    self.fieldnames
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py", line 90, in fieldnames
+    self._fieldnames = self.reader.next()
+_csv.Error: line contains NULL byte
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+Traceback (most recent call last):
+  File "data.py", line 42, in <module>
+    temp()
+  File "data.py", line 35, in temp
+    result = c.execute(q);
+sqlite3.OperationalError: no such table: people
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+Macintosh:Proj1 chloekaubisch$ python data.py
+(u'Theo', u'TheO', 2)
+Theo
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+
+import os, sqlite3, csv
+
+def go():
+
+    if (not os.path.exists("blogData.db")):
+
+        conn = sqlite3.connect("blogData.db")
+        c = conn.cursor()
+
+        q = "create table members (user text, pwd text, id integer)"
+        c.execute(q)
+
+        q = "insert into members (user, pwd, id) values ('Theo', 'TheO', 2)"
+        c.execute(q)
+
+        conn.commit()
+
+def temp():
+    conn = sqlite3.connect("blogData.db")
+    c = conn.cursor()
+
+    q="""                                                                       
+SELECT * FROM members                                                           
+"""
+
+    result = c.execute(q);
+    for r in result:
+        print r
+        print r[0]
+
+def addmember():
+
+
+go()
+temp()
+
+
+
+
+
+
+
+
+
+-uu-:**-F1  data.py        All L32    (Python)----------------------------------
+Last login: Sat Oct 10 12:19:29 on ttys002
+Macintosh:Proj1 chloekaubisch$ clear
+
+Macintosh:Proj1 chloekaubisch$ emacs data.py -nw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import os, sqlite3, csv
+
+def go():
+
+    if (not os.path.exists("memberData.db")):
+
+        conn = sqlite3.connect("memberData.db")
+        c = conn.cursor()
+
+        q = "create table members (user text, pwd text, id integer)"
+        c.execute(q)
+
+#        q = "insert into members (user, pwd, id) values ('Theo', 'TheO', 2)"   
+#        c.execute(q)                                                           
+
+        conn.commit()
+
+def temp():
+    conn = sqlite3.connect("blogData.db")
+    c = conn.cursor()
+
+    q="""                                                                       
+SELECT * FROM members                                                           
+"""
+
+    result = c.execute(q);
+    for r in result:
+        print r
+        print r[0]
+
+go()
+temp()
+
+
+
+
+
+
+
+
+
+
+
+
+-uu-:---F1  data.py        All L33    (Python)----------------------------------
+Wrote /Users/chloekaubisch/Softdev/Proj1/data.py
